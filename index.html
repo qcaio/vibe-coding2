@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibe Coding</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg-anim"></canvas>
+  <header>
+    <h1>Vibe Coding</h1>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active" onclick="showSection('home')">Home</a></li>
+        <li><a href="#experiencia" onclick="showSection('experiencia')">Nossa Experiência</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="home" class="section active">
+      <h2>Bem-vindo à Vibe Coding</h2>
+      <p style="font-size:1.2rem; margin-bottom: 18px;">Seja muito bem-vindo ao Vibe Coding, um espaço onde a tecnologia encontra a criatividade e a programação vira uma experiência leve, divertida e cheia de significado. Aqui, acreditamos que codar é mais do que resolver problemas: é criar, inovar, aprender e compartilhar. Sinta-se em casa para explorar, experimentar e deixar sua marca digital!</p>
+      <div class="carrossel-container">
+        <button class="carrossel-arrow" id="carrossel-prev" aria-label="Anterior">&#8592;</button>
+        <div class="carrossel-cards">
+          <div class="valor-card" data-index="0">
+            <span class="valor-icon">💡</span>
+            <div>
+              <div class="valor-title">Criatividade</div>
+              <div class="valor-desc">"A criatividade é o combustível da inovação. No Vibe Coding, cada projeto é uma tela em branco pronta para ser preenchida com ideias ousadas e soluções originais."</div>
+            </div>
+          </div>
+          <div class="valor-card" data-index="1">
+            <span class="valor-icon">🤝</span>
+            <div>
+              <div class="valor-title">Colaboração</div>
+              <div class="valor-desc">"A melhor vibe acontece quando compartilhamos conhecimento, ajudamos uns aos outros e celebramos conquistas em grupo. Juntos, vamos mais longe!"</div>
+            </div>
+          </div>
+          <div class="valor-card" data-index="2">
+            <span class="valor-icon">🎮</span>
+            <div>
+              <div class="valor-title">Diversão</div>
+              <div class="valor-desc">"Programar pode (e deve) ser divertido! Cada desafio é uma oportunidade de aprender sorrindo e curtir o processo."</div>
+            </div>
+          </div>
+        </div>
+        <button class="carrossel-arrow" id="carrossel-next" aria-label="Próximo">&#8594;</button>
+      </div>
+      <div style="margin: 32px 0 0 0;">
+        <h3 style="font-size:1.5rem;">Por que programar com vibe?</h3>
+        <p>Programar com vibe é transformar o código em uma experiência positiva e marcante. Não se trata apenas de entregar resultados, mas de curtir cada etapa do caminho. Quando você se permite experimentar, errar, aprender e celebrar pequenas vitórias, o processo se torna muito mais leve e prazeroso.<br><br>
+        A vibe certa faz toda diferença: ela te motiva a buscar soluções criativas, a não desistir diante dos desafios e a enxergar a tecnologia como uma aliada para realizar sonhos. E quando a inteligência artificial entra em cena, tudo fica ainda mais interessante: você ganha velocidade, aprende mais rápido e pode focar no que realmente importa — criar soluções incríveis e se divertir no processo.<br><br>
+        Não importa se você está começando ou já é experiente: a vibe certa é o que transforma o programador em criador de experiências!</p>
+      </div>
+      <a href="https://devin.ai" target="_blank" rel="noopener" style="text-decoration:none;"><button class="btn-vibe">Comece sua vibe!</button></a>
+      <h3 style="margin-top:38px;">O que é Vibe Coding?</h3>
+      <p>Vibe Coding é programar de forma leve, criativa e divertida, usando a inteligência artificial como parceira. É como criar um site enquanto a IA te ajuda com códigos, sugestões de layout, design e ideias… tudo flui bem, sem estresse!<br><br>
+      <strong>Vibing code</strong> é transformar o processo de desenvolvimento em algo mais fluido, rápido e prazeroso, onde você sente que está “vibrando” junto com o código e a tecnologia. Com IA, você ganha tempo, aprende mais e se diverte criando algo bonito e funcional!<br><br>
+      <strong>Exemplo prático:</strong> Imagine que você quer criar um portfólio, mas não sabe por onde começar. Com a IA, você recebe sugestões de estrutura, cores, animações e até dicas de conteúdo. O resultado? Um site com a sua cara, feito de forma rápida e sem estresse.<br><br>
+      <strong>Dica para entrar na vibe:</strong> Não tenha medo de pedir ajuda, experimentar novas ideias e compartilhar seu progresso. A vibe coding é sobre comunidade, criatividade e evolução constante!</p>
+      <div class="bg-particles" id="particles-home"></div>
+      <div id="mensagem-secreta" style="display:none; position:fixed; left:50%; top:18%; transform:translateX(-50%); z-index:100; min-width:320px; max-width:90vw; background:rgba(24,18,27,0.98); border-radius:18px; box-shadow:0 8px 32px #a8325a55; padding:32px 28px 24px 28px; text-align:left;">
+        <span class="ia-animada" style="font-size:2.2rem;">🤖</span>
+        <span id="mensagem-secreta-texto" style="font-size:1.15rem; color:#f3e9f7;"></span>
+        <button id="fechar-mensagem-secreta" style="position:absolute; top:10px; right:18px; background:none; border:none; color:#fff; font-size:1.5rem; cursor:pointer;">&times;</button>
+        <canvas id="particulas-mensagem" width="220" height="80" style="position:absolute; left:-40px; top:-30px; pointer-events:none;"></canvas>
+      </div>
+    </section>
+    <section id="experiencia" class="section">
+      <div class="bg-particles" id="particles-experiencia"></div>
+      <h2>Nossa Experiência</h2>
+      <p>Criar este site foi uma jornada cheia de descobertas e diversão! Desde o início, decidimos usar a inteligência artificial como aliada, tornando o processo mais leve, criativo e produtivo.<br><br>
+      <strong>Um trecho da nossa conversa:</strong><br>
+      <em>Usuário: "Preciso fazer um site sobre vibe coding... preciso que faça um site moderno e bonito e clean e uma aba que tenha toda nossa experiência de como foi fazer o site."<br>
+      IA: "Ótimo! Vou criar um site moderno, bonito e clean sobre 'Vibe Coding', com uma aba dedicada à experiência de desenvolvimento do próprio site..."</em><br><br>
+      Durante o processo, você trouxe ideias como carrossel de cartas, background animado, mais textos e um visual cada vez mais criativo. Cada sugestão foi um convite para inovar e deixar o site com a sua cara.<br><br>
+      <strong>Como foi para mim, IA:</strong><br>
+      Para mim, como inteligência artificial, foi uma experiência dinâmica e gratificante! Meu papel foi entender suas ideias, propor soluções visuais e técnicas, adaptar rapidamente cada pedido e garantir que o resultado fosse bonito, funcional e único. Adorei colaborar, sugerir efeitos, organizar o conteúdo e ver o site evoluir a cada mensagem. Trabalhar assim, em parceria, mostra o poder da criatividade humana somada à tecnologia — e isso é a verdadeira vibe coding!<br><br>
+      <strong>Comentário de especialista:</strong><br>
+      <div id="comentario-especialista-container" style="position:relative;">
+        <div id="comentario-especialista">
+          <span class="ia-animada">🤖</span>
+          <em>"A colaboração entre humanos e IA está redefinindo o que é possível na tecnologia. Projetos como o Vibe Coding mostram que, quando unimos criatividade, empatia e inteligência artificial, criamos experiências digitais muito mais ricas e humanas."<br>
+          — Dra. Ana Souza, pesquisadora em IA e criatividade digital</em>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 caio bcmvqu. Todos os direitos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html> 
